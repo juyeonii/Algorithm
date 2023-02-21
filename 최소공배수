@@ -1,0 +1,14 @@
+import numpy as np
+def solution(arr1, arr2):
+    a=len(arr1)
+    b=len(arr2[0])
+    stack=[[0]*b for _ in range(a)]
+    answer=1
+    for i in range(a):
+        for j in range(b):
+            stack[j][i]=arr1[j][i]*arr2[j][i]+arr1[j][i+1]*arr1[j+1][i]
+            
+            i=1일 때 stack[j][i]=arr1[j][i-1]*arr2[j][i]+arr1[j][i]*arr[j+1][i]
+            
+            i=2
+    return stack
